@@ -44,11 +44,11 @@ function Schedule(){
   return(
     <React.Fragment>
       <hr/>
-      {marketSchedule.Map((schedule, index) =>
-        <Schedule day={schedule.day}
-          location={schedule.location}
-          hours={schedule.hours}
-          booth={schedule.booth}
+      {marketSchedule.map((day, index) =>
+        <Day day={day.day}
+          location={day.location}
+          hours={day.hours}
+          booth={day.booth}
           key={index}/>
       )}
     </React.Fragment>
